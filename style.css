@@ -7,7 +7,7 @@ body {
 }
 #map {
   display: flex;
-  width: 500px;
+  width: 540px;
   height: 400px;
 }
 .buttons {
@@ -25,18 +25,62 @@ body {
     opacity: 1;
   }
 }
+#markers {
+  margin: 10px 0 10px 0;
+}
 .buttons__btn {
   background-color: #4264fb;
   margin: 2px;
   padding: 5px;
-  border: none;
   width: max-content;
-  color: #ffffff;
   font-weight: bold;
   border-radius: 3px;
-  height: calc(30px - 5px);
+  color: #ffffff;
+  border: none;
   cursor: pointer;
 }
+.marker * {
+  color: #4264fb;
+}
+.marker,
+.markerContenedor {
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px solid #4264fb;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  width: 100%;
+}
+.marker {
+  width: 100%;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  grid-template-columns: 33% 33% 33%;
+}
+.marker > div:first-child {
+  border: none;
+}
+.markerContenedor > button {
+  border: none;
+  font-size: 16px;
+  background-color: #4264fb;
+  color: #ffffff;
+  cursor: pointer;
+}
+.markerContenedor > button:hover {
+  background-color: #ffffff;
+  color: #4264fb;
+  border-left: 1px solid #4264fb;
+}
+.marker > div {
+  overflow: hidden;
+  border-left: 1px solid #4264fb;
+  padding: 10px;
+  text-align: center;
+}
+
 .map__container {
   display: flex;
 }
