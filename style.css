@@ -44,7 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   place-items: center;
-  width: calc(100% - 50px);
+  width: calc(100% - 100px);
   padding: 50px;
 }
 .app > main {
